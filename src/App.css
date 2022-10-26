@@ -1,38 +1,131 @@
-.App {
+html,
+      body {
+        height: 100%;
+        color: white;
+        background-color: black;
+      }
+      .logo {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        padding: 40px;
+        background-color: rgb(255, 231, 202);
+        border-radius: 18px;
+        border-color: black;
+        border-width: 3.5px;
+        border-style: solid;
+        box-shadow:  0px 6px 60px #ffffff6b;
+        animation: 3s linear light infinite;
+      }
+      @keyframes light{
+        0%{
+          box-shadow:  0px 6px 60px #ffffff2a;
+        }
+        50%{
+          box-shadow:  0px 6px 60px #ffffffed;
+        }
+        100%{
+          box-shadow:  0px 6px 60px #ffffff2a;
+        }
+      }
+      #logo-self {
+        width: 15rem;
+        margin-right: 10px;
+        animation-fill-mode: forwards;
+      }
+      #logo-self path {
+        fill: none;
+        stroke: black;
+        stroke-width: 10px;
+        stroke-linecap: round;
+        animation-fill-mode: forwards;
+      }
+      #logo-self path:nth-child(1) {
+        stroke-dasharray: 840;
+        stroke-dashoffset: 841;
+        animation: 2s cubic-bezier(0.45, 0.05, 0.55, 0.95) painting;
+        animation-fill-mode: forwards;
+      }
+      #logo-self path:nth-child(2) {
+        stroke-dasharray: 435.64;
+        stroke-dashoffset: 435.64;
+        animation: 1.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1.9s painting;
+        animation-fill-mode: forwards;
+      }
+      #logo-self path:nth-child(3) {
+        stroke-dasharray: 454.35;
+        stroke-dashoffset: 454.35;
+        animation: 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 3.3s painting;
+        animation-fill-mode: forwards;
+      }
+      #logo-self path:nth-child(4) {
+        stroke-dasharray: 351.57;
+        stroke-dashoffset: 351.57;
+        animation: 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 4.2s painting;
+        animation-fill-mode: forwards;
+      }
+      #logo-self path:nth-child(5) {
+        stroke-dasharray: 417.70;
+        stroke-dashoffset: 417.70;
+        animation: 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 5.1s painting;
+        animation-fill-mode: forwards;
+      }
+      @keyframes painting {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#root{
+  height: 100%;
+}
+.content{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button{
+  padding: 10px;
+  margin-top: 50px;
+  /* color: white; */
+  border-radius: 20px;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button:hover{
+  color: black;
+  animation: .3s ease-in select;
+  animation-fill-mode: forwards;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.button:hover a{
+  color: black;
+}
+a:hover{
+  color: black;
+}
+a:link{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+a:visited{
+  color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+a:visited:hover{
+  color: black;
+}
+a:active{
+  color: black;
+}
+@keyframes select{
   to {
-    transform: rotate(360deg);
+    background-color: white;
   }
 }
